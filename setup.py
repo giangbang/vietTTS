@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 __version__ = "0.4.1"
 url = "https://github.com/ntt123/vietTTS"
@@ -38,6 +38,6 @@ setup(
     install_requires=install_requires,
     setup_requires=setup_requires,
     tests_require=tests_require,
-    packages=["vietTTS"],
+    packages=find_packages(),
     python_requires=">=3.7",
 )
