@@ -38,7 +38,7 @@ setup(
     install_requires=install_requires,
     setup_requires=setup_requires,
     tests_require=tests_require,
-    packages=find_packages() + ["asset"],
+    packages=find_packages() + ["assets"],
     package_data={'': ['*.txt']},
     python_requires=">=3.7",
 )
