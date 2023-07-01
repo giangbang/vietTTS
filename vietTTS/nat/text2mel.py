@@ -83,7 +83,7 @@ def predict_mel(tokens, durations):
 
 
 def text2mel(
-    text: str, lexicon_fn=FLAGS.data_dir / "lexicon.txt", silence_duration: float = -1.0
+    text: str, lexicon_fn="assets/infore/lexicon.txt", silence_duration: float = -1.0
 ):
     tokens = text2tokens(text, lexicon_fn)
     durations = predict_duration(tokens)
