@@ -82,10 +82,8 @@ def predict_mel(tokens, durations):
     return predict_fn(params, aux, rng, tokens, durations, n_frames)[0]
 
 
-import pkg_resources
-
 def text2mel(
-    text: str, lexicon_fn=pkg_resources.resource_filename(__name__, "lexicon.txt"), silence_duration: float = -1.0
+    text: str, lexicon_fn=FLAGS.data_dir, silence_duration: float = -1.0
 ):
     tokens = text2tokens(text, lexicon_fn)
     durations = predict_duration(tokens)

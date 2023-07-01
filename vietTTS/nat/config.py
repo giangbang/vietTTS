@@ -54,9 +54,13 @@ class FLAGS(Namespace):
     weight_decay = 1e-4
     token_mask_prob = 0.1
 
+    
+    import pkg_resources
+    data_dir = pkg_resources.resource_filename(__name__, 'lexicon.txt')
+
     # ckpt
     ckpt_dir = Path("assets/infore/nat")
-    data_dir = Path("train_data")
+    data_dir = Path(data_dir)
 
 
 class DurationInput(NamedTuple):
