@@ -39,5 +39,6 @@ setup(
     setup_requires=setup_requires,
     tests_require=tests_require,
     packages=find_packages(),
+    package_data={'': ['*.txt']},
     python_requires=">=3.7",
 )
